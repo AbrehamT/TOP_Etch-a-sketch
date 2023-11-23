@@ -1,14 +1,45 @@
-body{
-    display: flex;
+html, body {
+    height: 100%; /* Ensures that the body takes the full height of the viewport */
+    width: 100%;
+    margin: 0;    /* Removes default margin */
+    display: flex; /* Needed to correctly position the child div */
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
 
+.Canvas-Control{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .container{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    border: medium solid black;
-    max-width: 100px;
-    max-height: 100px;
+    display: grid;
+    background-color: aqua;
+    border: 2px solid black;
+    grid-template-columns: repeat(3, minmax(20px, 200px));
+    grid-template-rows: repeat(3, minmax(20px, 200px));
 }
+
+.control{
+    border: 2px solid black;
+    padding: 20px;
+}
+.cell{
+    border: 2px solid red;
+    text-align: center;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1{
+    margin-bottom: 0.5px;
+}
+
+
+
